@@ -7,7 +7,13 @@
     <persistence-unit name="loja" transaction-type="RESOURCE_LOCAL">
 
         <properties>
-            <property name="" value=""/>
+            <property name="javax.persistence.jdbc.url" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:loja"/>
+            <property name="javax.persistence.jdbc.user" value="Stefanie"/>
+            <property name="javax.persistence.jdbc.password" value="1104*ste"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
         </properties>
 
     </persistence-unit>
