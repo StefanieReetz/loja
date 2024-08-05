@@ -1,6 +1,7 @@
 package br.com.alura.loja.testes;
 
 import br.com.alura.loja.dao.ProdutoDao;
+import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
 
@@ -9,12 +10,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.math.BigDecimal;
 
+
 public class CadatroDeProduto {
     public static void main(String[] args) {
-        Produto celular = new Produto();
-        celular.setNome("Samsung Galaxy A20");
-        celular.setDescricao("Funciona bem");
-        celular.setPreco(new BigDecimal("1000"));
+        Categoria celulares = new Categoria("CELULARES");
+        Produto celular = new Produto("Samsung Galaxy A20","Funciona bem",new BigDecimal("1000"), celulares);
+
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao dao = new ProdutoDao(em);
