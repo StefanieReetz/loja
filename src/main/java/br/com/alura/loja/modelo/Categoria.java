@@ -11,6 +11,10 @@ public class Categoria {
      private Long ID;
    private String nome;
 
+   public Categoria(){
+
+   }
+
     public Categoria(String nome) {
         this.nome = nome;
     }
