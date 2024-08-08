@@ -4,6 +4,7 @@ import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Produto;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 public class CategoriaDao {
 
@@ -23,4 +24,5 @@ public class CategoriaDao {
         em.merge(categoria);
         this.em.remove(categoria);
     }
+
 }

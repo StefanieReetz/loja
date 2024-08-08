@@ -8,15 +8,18 @@
         <properties>
 
 
-            <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost/loja?useSSL=true&amp;serverTimezone=UTC" />
-
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/loja?useSSL=true&amp;serverTimezone=UTC" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.user" value="Stefanie" />
             <property name="javax.persistence.jdbc.password" value="110409*ste" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update" />
             <!-- https://docs.jboss.org/hibernate/orm/5.4/javadocs/org/hibernate/dialect/package-summary.html -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+
+
         </properties>
     </persistence-unit>
 
